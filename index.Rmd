@@ -367,9 +367,10 @@ cat("```yaml",
 
 ## ggvis
 
+- 最近才放在CRAN的套件，語法類似ggplot
 
 
-## 
+## Scatter Plot
 
 ```{r message=FALSE, echo=TRUE}
 library(knitr)
@@ -543,9 +544,15 @@ cat("```r",
 
 - [ShinyApps.io](https://www.shinyapps.io/)
 
+    - RStudio推出的雲端Shiny Server服務
+
+```r
+devtools::install_github('rstudio/shinyapps')
+```
+
 - [Shiny Server](http://www.rstudio.com/products/shiny/shiny-server/)
 
-    - 預設Shiny Server會位於/srv/shiny-server
+    - 預設Shiny Server資料夾會位於/srv/shiny-server
 
 
 ## Hosting Model
