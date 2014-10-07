@@ -1,0 +1,16 @@
+{
+    "contents" : "shinyUI(fluidPage(\n    titlePanel(\"薪資及生產力統計資料\"),\n    sidebarLayout(\n        sidebarPanel(\n            selectInput(\"type\", \"樣式\", \n                        choices = c(\"Motion\", \"長條圖\", \"圓餅圖\", \"表格\"),\n                        selected = \"Motion\"\n                        ),\n            \n            conditionalPanel(\"input.type != 'Motion'\",\n                uiOutput(\"var\"),\n                                 \n                sliderInput(\"year\", \"西元年\",\n                            min=1973, max=2012, value=2012, step=1,\n                            format=\"###0\", animate = TRUE\n                            ),\n                                 \n                checkboxInput(\"is_sort\", \"排序\", T)\n            ), \n            \n            width = 3\n        ),\n        \n        mainPanel(htmlOutput(\"view\"))\n        )\n    )\n)",
+    "created" : 1412271515431.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3192332304",
+    "id" : "C8CB765E",
+    "lastKnownWriteTime" : 1412305750,
+    "path" : "~/Dropbox/Public/demo/interactive_visualization_with_r/apps/googleVis_shiny/ui.R",
+    "project_path" : "apps/googleVis_shiny/ui.R",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

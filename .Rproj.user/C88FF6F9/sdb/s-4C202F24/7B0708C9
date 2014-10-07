@@ -1,0 +1,16 @@
+{
+    "contents" : "library(googleVis)\nlibrary(shiny)\n\nworker_data = read.csv(\"worker_data.csv\", stringsAsFactors=F)\ncolnames(worker_data) = gsub(\"\\\\.\", \"\", colnames(worker_data))\nworker_data[worker_data == \"-\"] = NA\nindex = which(colnames(worker_data) != \"行業\")\nfor(i in index){\n    worker_data[, i] = as.numeric(worker_data[, i])\n}\nworker_data$時間年 = worker_data$時間年 + 1911\nworker_data$平均時薪 = worker_data$平均薪資/worker_data$平均工時\n# str(worker_data)\n\nchoices = setdiff(colnames(worker_data), c(\"時間年\", \"行業\"))\n\ngvis_options = list(\"Motion\" = list(),\n                    \"長條圖\" = list(height = 500,\n                                 chartArea = \"{top:0}\"),\n                    \"圓餅圖\" = list(height = 500,\n                                 chartArea = \"{top:0}\"),\n                    \"表格\" = list())\n\nmessage(\"outside shinyServer\")\n\nshinyServer(function(input, output) {\n    message(\"inside shinyServer\")\n    output$var = renderUI({\n        message(\"renderUI\")\n        selectInput(\"var\", \"項目\", \n                    choices = choices,\n                    selected = \"平均時薪\"\n        )\n    })\n    \n    datasetInput = reactive({\n        message(\"reactive\")\n        year = input$year\n        var = input$var\n        is_sort = input$is_sort\n        sub_data = worker_data[which(worker_data$時間年 == year), \n                               c(\"行業\", var)]\n        if (is_sort){\n            index = order(sub_data[, var], decreasing=T)\n            sub_data = sub_data[index, ]\n        }\n        data.frame(sub_data)\n    })\n    \n    gvis_type = list(\"Motion\" = gvisMotionChart,\n                     \"長條圖\" = gvisBarChart,\n                     \"圓餅圖\" = gvisPieChart,\n                     \"表格\" = gvisTable)\n    \n    output$view = renderGvis({\n        message(\"renderGvis\")\n        if (input$type == \"Motion\"){\n            message(input$type)\n            gvis_type[[input$type]](worker_data, \n                                    idvar=\"行業\", \n                                    timevar=\"時間年\",\n                                    xvar=\"受僱員工人數\",\n                                    yvar=\"平均時薪\",\n                                    options = gvis_options[[input$type]])\n        } else{\n            message(input$type)\n            gvis_type[[input$type]](datasetInput(),\n                                    options = gvis_options[[input$type]])\n        }\n    })\n\n})",
+    "created" : 1412271240162.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "552232212",
+    "id" : "7B0708C9",
+    "lastKnownWriteTime" : 1412697790,
+    "path" : "~/Dropbox/Public/demo/interactive_visualization_with_r/apps/googleVis_shiny/server.R",
+    "project_path" : "apps/googleVis_shiny/server.R",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

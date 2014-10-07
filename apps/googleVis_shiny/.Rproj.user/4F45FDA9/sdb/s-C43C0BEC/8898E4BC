@@ -1,0 +1,16 @@
+{
+    "contents" : "library(googleVis)\nlibrary(shiny)\n# library(xlsx)\n\n# worker_data = read.xlsx2(\"MoreTable01.xls\", 1, stringsAsFactors=F)\n# worker_data = read.csv(\"worker_data.csv\", stringsAsFactors=F)\nworker_data = read.csv(\"MoreTable01.csv\", stringsAsFactors=F)\ncolnames(worker_data) = gsub(\"\\\\.\", \"\", colnames(worker_data))\nworker_data[worker_data == \"-\"] = NA\nindex = which(colnames(worker_data) != \"行業\")\nfor(i in index){\n    worker_data[, i] = as.numeric(worker_data[, i])\n}\nworker_data$時間年 = worker_data$時間年 + 1911\nworker_data$平均時薪 = worker_data$平均薪資/worker_data$平均工時\nstr(worker_data)\n\nchoices_vector = c(\"受僱員工人數\",\n                   \"平均薪資\",\n                   \"經常性薪資\",\n                   \"非經常性薪資\",\n                   \"加班費\",\n                   \"平均工時\",\n                   \"正常工時\",\n                   \"加班工時\",\n                   \"進入率\",\n                   \"退出率\",\n                   \"勞動生產力指數\",\n                   \"單位產出勞動成本指數\",\n                   \"平均薪資指數\",\n                   \"經常性薪資指數\",\n                   \"平均時薪\"\n                   )\n\nshinyServer(function(input, output) {\n    datasetInput = reactive({\n        year = input$year\n        print(year)\n        var = input$var\n        print(var)\n        is_sort = input$is_sort\n        print(is_sort)\n        sub_data = worker_data[which(worker_data$時間年 == year), \n                                  c(\"行業\", var)]\n        if (is_sort){\n            index = order(sub_data[, var], decreasing=T)\n            sub_data = sub_data[index, ]\n        }\n        data.frame(sub_data)\n    })\n    \n    typeInput = reactive({\n        type = input$type\n    })\n\n    gvis_list = list(\"Motion\"=gvisMotionChart,\n                         \"長條圖\"=gvisBarChart,\n                         \"圓餅圖\"=gvisPieChart,\n                         \"表格\"=gvisTable)\n    \n    \n    output$view = renderGvis({\n        if (typeInput() != \"Motion\"){\n            gvis_list[[typeInput()]](datasetInput())\n        }\n    })\n    \n    output$motion = renderGvis({\n        if (typeInput() == \"Motion\"){\n            gvisMotionChart(worker_data, \n                            idvar=\"行業\", \n                            timevar=\"時間年\",\n                            xvar=\"受僱員工人數\",\n                            yvar=\"平均時薪\")\n        }\n    })\n\n})",
+    "created" : 1405873108080.000,
+    "dirty" : true,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "156323496",
+    "id" : "8898E4BC",
+    "lastKnownWriteTime" : 1405839087,
+    "path" : "~/ShinyApps/googleVis_shiny/server.R",
+    "project_path" : "server.R",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

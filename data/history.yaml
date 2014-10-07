@@ -1,0 +1,61 @@
+-   startDate: "2000,09,01"
+    endDate: "2005,06,30"
+    headline: National Chung-Hsing University
+    text: |
+        <h4>Bachelors of Science, Applied Mathematics</h4>
+        Minor in Marketing
+    asset:
+        #media: "http://"
+
+-   startDate: "2005,09,01"
+    endDate: "2007,07,31"
+    headline: National Cheng-Chi University
+    text: |
+        <h4>Master of Science, Statistics</h4>
+        Population Forecasting
+    asset:
+
+-   startDate: "2007,11,01"
+    endDate: "2008,09,30"
+    headline: National Cheng-Chi University
+    text: |
+        <h4>Research Assistant</h4>
+        <ul style="list-style-type:disc">
+            <li>Executed nationwide media usage survey of teenagers.</li>
+        </ul>
+        
+    asset:
+
+-   startDate: "2009,11,01"
+    endDate: "2012,08,10"
+    headline: International Integrated System, Inc.
+    text: |
+        <h4>Associate Engineer</h4>
+        <ul style="list-style-type:disc">
+            <li>Developed an automatic statistical forecasting system for Central Weather Bureau. Produced over one hundred thousand forecasts per day as the forecast guidance of weathermen.</li>
+        </ul>
+        
+    asset:
+
+-   startDate: "2012,08,13"
+    endDate: "2013,08,05"
+    headline: President Information Corp.
+    text: |
+        <h4>Research Analyst</h4>
+        <ul style="list-style-type:disc">
+            <li>Built a forecasting model for fresh foods in 7-11.</li>
+            <li>Provided CRM and cross selling solutions for Starbucks.</li>
+            <li>Developed an automatic questionnaire report system and text mining module.</li>
+        </ul>
+    asset:
+
+-   startDate: "2013,08,12"
+    endDate: "now"
+    headline: Trend Micro
+    text: |
+        <h4>Sr. Engnieer</h4>
+        <ul style="list-style-type:disc">
+            <li>Analyzing massive machine-generated data with R, Python and Hadoop(Pig, Map Reduce and Hbase).</li>
+            <li>Creating auto-updated visualization apps for real-time marketing metrics.</li>
+        </ul>
+    asset:
