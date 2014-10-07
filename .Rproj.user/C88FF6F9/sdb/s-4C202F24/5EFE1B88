@@ -1,0 +1,16 @@
+{
+    "contents" : "# Shiny Server Deployment for Ubuntu 12.04\n*Mansun Kuo*\n\n*2014-10-07*\n\n## Dependency\n\n### R\n\n[Installing R](http://cran.rstudio.com/bin/linux/ubuntu/README.html)\n\n\n```bash\nsudo vim /etc/apt/sources.list\n```\n\nadd:\n\n```bash\n# R\ndeb http://cran.rstudio.com/bin/linux/ubuntu precise/\ndeb-src http://cran.rstudio.com/bin/linux/ubuntu precise/\n```\n\n```bash\nsudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E084DAB9\nsudo apt-get update\nsudo apt-get install r-base\n```\n\n### Curl\n\nInstall libcurl for package RCurl ([reference](http://www.omegahat.org/RCurl/FAQ.html)).\n\n```\napt-get install curl libcurl4-openssl-dev\n```\n\n### Shiny Server\n\n#### Install Shiny Server\n\nYou may need to set proxy to install R packages([ref](http://stackoverflow.com/questions/6467277/proxy-setting-for-r)).\nIn R command line, set th proxy using\n\n```\nSys.setenv(http_proxy=\"your proxy\")\n```\n\nDownload [Shiny Server](http://www.rstudio.com/products/shiny/download-server/) \n\nYou may also need [Rstudio Server](http://www.rstudio.com/products/rstudio/download-server/) for development purpose.\n\nRelated documents:\n\n- [Administrator's Guide](http://rstudio.github.io/shiny-server/latest/)\n\n\n#### Reverse Proxy\n\n[Running with a Proxy](https://support.rstudio.com/hc/en-us/articles/200552326-Running-with-a-Proxy)\n\nFor apache on Ubuntu 12.04:\n\n```\nsudo apt-get install apache2\nsudo apt-get install libapache2-mod-proxy-html\nsudo apt-get install libxml2-dev\nsudo a2enmod proxy\nsudo a2enmod proxy_http\n```\n\nSetting of /etc/apache2/httpd.conf\n\n```http\n<VirtualHost *:80>\n\n  <Proxy *>\n    Allow from localhost\n  </Proxy>\n\n  ProxyPass        /rstudio/ http://localhost:8787/\n  ProxyPassReverse /rstudio/ http://localhost:8787/\n  RedirectMatch permanent ^/rstudio$ /rstudio/\n  \n  ProxyPass        /shiny/ http://localhost:3838/\n  ProxyPassReverse /shiny/ http://localhost:3838/\n  RedirectMatch permanent ^/shiny$ /shiny/\n\n</VirtualHost>\n\n```\n",
+    "created" : 1412701125155.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2025922983",
+    "id" : "5EFE1B88",
+    "lastKnownWriteTime" : 1412704318,
+    "path" : "~/Dropbox/Public/demo/interactive_visualization_with_r/shiny_server_deployment.md",
+    "project_path" : "shiny_server_deployment.md",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "markdown"
+}
