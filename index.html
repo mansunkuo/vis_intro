@@ -134,13 +134,9 @@
 
 </article></slide><slide class=''><hgroup><h2></h2></hgroup><article  id="section" class="flexbox vcenter emphasized">
 
-<p>讓資料看起來美觀甚至是有趣還是很重要</p>
-
-</article></slide><slide class=''><hgroup><h2></h2></hgroup><article  id="section-1" class="flexbox vcenter emphasized">
-
 <p><span>
 今天談談怎麼使用R做出動來動去<br/><span style="text-decoration: line-through;">
-但用途不明</span>的圖表</span></p>
+但用途不明</span>的有趣圖表</span></p>
 
 </article></slide><slide class='segue dark nobackground'><hgroup class = 'auto-fadein'><h2>googleVis</h2></hgroup><article  id="googlevis">
 
@@ -190,7 +186,7 @@ chunk option: results=&#39;asis&#39;
 <li>options參數以List型態輸入，中間可能包括json物件</li>
 <li>Motion、Annotated Time Lines和Geo Maps需要Flash</li>
 <li>在本地資料夾使用motion chart需設定flash安全安全性</li>
-<li>html slides相容性</li>
+<li>html slides相容性，有時需要重新整理頁面才能有良好的解析度</li>
 </ul>
 
 </article></slide><slide class=''><hgroup><h2>讀取googleVis</h2></hgroup><article  id="googlevis">
@@ -228,7 +224,7 @@ travel_file = &quot;data/data.json&quot;
 travel_json = readLines(travel_file, warn=FALSE, encoding=&quot;UTF-8&quot;)
 travel_data = fromJSON(travel_json, simplifyVector = TRUE)</pre>
 
-</article></slide><slide class=''><hgroup><h2></h2></hgroup><article  id="section-2" class="smaller">
+</article></slide><slide class=''><hgroup><h2></h2></hgroup><article  id="section-1" class="smaller">
 
 <pre class = 'prettyprint lang-r'>str(travel_data)</pre>
 
@@ -286,22 +282,14 @@ Table = gvisTable(gvisdata, options=list(page=&quot;enable&quot;))
 print(Table, &quot;chart&quot;)</pre>
 
 <!-- Table generated in R 3.1.1 by googleVis 0.5.5 package -->
-<<<<<<< HEAD
-<!-- Wed Oct  8 05:27:23 2014 -->
-=======
-<!-- Wed Oct  8 06:04:29 2014 -->
->>>>>>> gh-pages
+<!-- Wed Oct  8 08:27:41 2014 -->
 
 
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-<<<<<<< HEAD
-function gvisDataTableID51873dbb3083 () {
-=======
-function gvisDataTableID52bd20515e20 () {
->>>>>>> gh-pages
+function gvisDataTableID5b89137cf9a1 () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -1877,23 +1865,14 @@ return(data);
 }
  
 // jsDrawChart
-<<<<<<< HEAD
-function drawChartTableID51873dbb3083() {
-var data = gvisDataTableID51873dbb3083();
-=======
-function drawChartTableID52bd20515e20() {
-var data = gvisDataTableID52bd20515e20();
->>>>>>> gh-pages
+function drawChartTableID5b89137cf9a1() {
+var data = gvisDataTableID5b89137cf9a1();
 var options = {};
 options["allowHtml"] = true;
 options["page"] = "enable";
 
     var chart = new google.visualization.Table(
-<<<<<<< HEAD
-    document.getElementById('TableID51873dbb3083')
-=======
-    document.getElementById('TableID52bd20515e20')
->>>>>>> gh-pages
+    document.getElementById('TableID5b89137cf9a1')
     );
     chart.draw(data,options);
     
@@ -1917,15 +1896,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-<<<<<<< HEAD
-callbacks.push(drawChartTableID51873dbb3083);
+callbacks.push(drawChartTableID5b89137cf9a1);
 })();
-function displayChartTableID51873dbb3083() {
-=======
-callbacks.push(drawChartTableID52bd20515e20);
-})();
-function displayChartTableID52bd20515e20() {
->>>>>>> gh-pages
+function displayChartTableID5b89137cf9a1() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -1949,20 +1922,12 @@ callbacks.shift()();
 </script>
  
 <!-- jsChart -->  
-<<<<<<< HEAD
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartTableID51873dbb3083"></script>
-=======
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartTableID52bd20515e20"></script>
->>>>>>> gh-pages
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartTableID5b89137cf9a1"></script>
  
 <!-- divChart -->
   
 
-<<<<<<< HEAD
-<div id="TableID51873dbb3083" style="width: 500; height: automatic;">
-=======
-<div id="TableID52bd20515e20" style="width: 500; height: automatic;">
->>>>>>> gh-pages
+<div id="TableID5b89137cf9a1" style="width: 500; height: automatic;">
 </div>
 
 </article></slide><slide class=''><hgroup><h2>gvisMap</h2></hgroup><article  id="gvismap">
@@ -1982,7 +1947,7 @@ cat(Map$html$header, Map$html$chart, Map$html$footer,
 
 <pre class = 'prettyprint lang-html'>&lt;iframe src=&quot;charts/Map.html&quot;&gt;&lt;/iframe&gt;</pre>
 
-</article></slide><slide class=''><hgroup><h2></h2></hgroup><article  id="section-3">
+</article></slide><slide class=''><hgroup><h2></h2></hgroup><article  id="section-2">
 
 <iframe src="charts/Map.html"></iframe>
 
@@ -2002,27 +1967,19 @@ Bar = gvisBarChart(gvisdata[which(gvisdata[,2]&gt;5),],
                                 )
                    )</pre>
 
-</article></slide><slide class=''><hgroup><h2></h2></hgroup><article  id="section-4">
+</article></slide><slide class=''><hgroup><h2></h2></hgroup><article  id="section-3">
 
 <pre class = 'prettyprint lang-r'>print(Bar, &quot;chart&quot;) </pre>
 
 <!-- BarChart generated in R 3.1.1 by googleVis 0.5.5 package -->
-<<<<<<< HEAD
-<!-- Wed Oct  8 05:27:23 2014 -->
-=======
-<!-- Wed Oct  8 06:04:29 2014 -->
->>>>>>> gh-pages
+<!-- Wed Oct  8 08:27:41 2014 -->
 
 
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-<<<<<<< HEAD
-function gvisDataBarChartID51874bd710c5 () {
-=======
-function gvisDataBarChartID52bdeed1ecf () {
->>>>>>> gh-pages
+function gvisDataBarChartID5b89685bb7af () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -2078,13 +2035,8 @@ return(data);
 }
  
 // jsDrawChart
-<<<<<<< HEAD
-function drawChartBarChartID51874bd710c5() {
-var data = gvisDataBarChartID51874bd710c5();
-=======
-function drawChartBarChartID52bdeed1ecf() {
-var data = gvisDataBarChartID52bdeed1ecf();
->>>>>>> gh-pages
+function drawChartBarChartID5b89685bb7af() {
+var data = gvisDataBarChartID5b89685bb7af();
 var options = {};
 options["allowHtml"] = true;
 options["width"] =    980;
@@ -2092,11 +2044,7 @@ options["height"] =    500;
 options["hAxis"] = {'minValue': 0};
 
     var chart = new google.visualization.BarChart(
-<<<<<<< HEAD
-    document.getElementById('BarChartID51874bd710c5')
-=======
-    document.getElementById('BarChartID52bdeed1ecf')
->>>>>>> gh-pages
+    document.getElementById('BarChartID5b89685bb7af')
     );
     chart.draw(data,options);
     
@@ -2120,15 +2068,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-<<<<<<< HEAD
-callbacks.push(drawChartBarChartID51874bd710c5);
+callbacks.push(drawChartBarChartID5b89685bb7af);
 })();
-function displayChartBarChartID51874bd710c5() {
-=======
-callbacks.push(drawChartBarChartID52bdeed1ecf);
-})();
-function displayChartBarChartID52bdeed1ecf() {
->>>>>>> gh-pages
+function displayChartBarChartID5b89685bb7af() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -2152,20 +2094,12 @@ callbacks.shift()();
 </script>
  
 <!-- jsChart -->  
-<<<<<<< HEAD
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartBarChartID51874bd710c5"></script>
-=======
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartBarChartID52bdeed1ecf"></script>
->>>>>>> gh-pages
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartBarChartID5b89685bb7af"></script>
  
 <!-- divChart -->
   
 
-<<<<<<< HEAD
-<div id="BarChartID51874bd710c5" style="width: 980; height: 500;">
-=======
-<div id="BarChartID52bdeed1ecf" style="width: 980; height: 500;">
->>>>>>> gh-pages
+<div id="BarChartID5b89685bb7af" style="width: 980; height: 500;">
 </div>
 
 </article></slide><slide class=''><hgroup><h2>gvisHistogram &amp; gvisMerge</h2></hgroup><article  id="gvishistogram-gvismerge">
@@ -2188,27 +2122,19 @@ hist_lon = gvisHistogram(data.frame(lon = as.numeric(travel_data$longitude)),
                                         width = 500, height = 500))
 hist_latlon = gvisMerge(hist_lat, hist_lon, horizontal = TRUE)</pre>
 
-</article></slide><slide class=''><hgroup><h2></h2></hgroup><article  id="section-5">
+</article></slide><slide class=''><hgroup><h2></h2></hgroup><article  id="section-4">
 
 <pre class = 'prettyprint lang-r'>print(hist_latlon, &quot;chart&quot;)</pre>
 
 <!-- Histogram generated in R 3.1.1 by googleVis 0.5.5 package -->
-<<<<<<< HEAD
-<!-- Wed Oct  8 05:27:23 2014 -->
-=======
-<!-- Wed Oct  8 06:04:29 2014 -->
->>>>>>> gh-pages
+<!-- Wed Oct  8 08:27:41 2014 -->
 
 
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-<<<<<<< HEAD
-function gvisDataHistogramID5187148e1c69 () {
-=======
-function gvisDataHistogramID52bd7181afb0 () {
->>>>>>> gh-pages
+function gvisDataHistogramID5b895d7877af () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -2889,11 +2815,7 @@ return(data);
 
 
 // jsData 
-<<<<<<< HEAD
-function gvisDataHistogramID51877deb3c09 () {
-=======
-function gvisDataHistogramID52bd79358607 () {
->>>>>>> gh-pages
+function gvisDataHistogramID5b89ff9b21a () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -3573,13 +3495,8 @@ return(data);
 }
  
 // jsDrawChart
-<<<<<<< HEAD
-function drawChartHistogramID5187148e1c69() {
-var data = gvisDataHistogramID5187148e1c69();
-=======
-function drawChartHistogramID52bd7181afb0() {
-var data = gvisDataHistogramID52bd7181afb0();
->>>>>>> gh-pages
+function drawChartHistogramID5b895d7877af() {
+var data = gvisDataHistogramID5b895d7877af();
 var options = {};
 options["allowHtml"] = true;
 options["vAxis"] = {'title': 'Latitude'};
@@ -3591,11 +3508,7 @@ options["width"] =    500;
 options["height"] =    500;
 
     var chart = new google.visualization.Histogram(
-<<<<<<< HEAD
-    document.getElementById('HistogramID5187148e1c69')
-=======
-    document.getElementById('HistogramID52bd7181afb0')
->>>>>>> gh-pages
+    document.getElementById('HistogramID5b895d7877af')
     );
     chart.draw(data,options);
     
@@ -3605,13 +3518,8 @@ options["height"] =    500;
 
 
 // jsDrawChart
-<<<<<<< HEAD
-function drawChartHistogramID51877deb3c09() {
-var data = gvisDataHistogramID51877deb3c09();
-=======
-function drawChartHistogramID52bd79358607() {
-var data = gvisDataHistogramID52bd79358607();
->>>>>>> gh-pages
+function drawChartHistogramID5b89ff9b21a() {
+var data = gvisDataHistogramID5b89ff9b21a();
 var options = {};
 options["allowHtml"] = true;
 options["vAxis"] = {'title': 'Frequency'};
@@ -3623,11 +3531,7 @@ options["width"] =    500;
 options["height"] =    500;
 
     var chart = new google.visualization.Histogram(
-<<<<<<< HEAD
-    document.getElementById('HistogramID51877deb3c09')
-=======
-    document.getElementById('HistogramID52bd79358607')
->>>>>>> gh-pages
+    document.getElementById('HistogramID5b89ff9b21a')
     );
     chart.draw(data,options);
     
@@ -3651,15 +3555,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-<<<<<<< HEAD
-callbacks.push(drawChartHistogramID5187148e1c69);
+callbacks.push(drawChartHistogramID5b895d7877af);
 })();
-function displayChartHistogramID5187148e1c69() {
-=======
-callbacks.push(drawChartHistogramID52bd7181afb0);
-})();
-function displayChartHistogramID52bd7181afb0() {
->>>>>>> gh-pages
+function displayChartHistogramID5b895d7877af() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -3696,15 +3594,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-<<<<<<< HEAD
-callbacks.push(drawChartHistogramID51877deb3c09);
+callbacks.push(drawChartHistogramID5b89ff9b21a);
 })();
-function displayChartHistogramID51877deb3c09() {
-=======
-callbacks.push(drawChartHistogramID52bd79358607);
-})();
-function displayChartHistogramID52bd79358607() {
->>>>>>> gh-pages
+function displayChartHistogramID5b89ff9b21a() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -3728,19 +3620,11 @@ callbacks.shift()();
 </script>
  
 <!-- jsChart -->  
-<<<<<<< HEAD
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartHistogramID5187148e1c69"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartHistogramID5b895d7877af"></script>
 
 
 <!-- jsChart -->  
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartHistogramID51877deb3c09"></script>
-=======
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartHistogramID52bd7181afb0"></script>
-
-
-<!-- jsChart -->  
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartHistogramID52bd79358607"></script>
->>>>>>> gh-pages
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartHistogramID5b89ff9b21a"></script>
  
 <table border="0">
 <tr>
@@ -3749,11 +3633,7 @@ callbacks.shift()();
 <!-- divChart -->
   
 
-<<<<<<< HEAD
-<div id="HistogramID5187148e1c69" style="width: 500; height: 500;">
-=======
-<div id="HistogramID52bd7181afb0" style="width: 500; height: 500;">
->>>>>>> gh-pages
+<div id="HistogramID5b895d7877af" style="width: 500; height: 500;">
 </div>
 
 </td>
@@ -3762,11 +3642,7 @@ callbacks.shift()();
 <!-- divChart -->
   
 
-<<<<<<< HEAD
-<div id="HistogramID51877deb3c09" style="width: 500; height: 500;">
-=======
-<div id="HistogramID52bd79358607" style="width: 500; height: 500;">
->>>>>>> gh-pages
+<div id="HistogramID5b89ff9b21a" style="width: 500; height: 500;">
 </div>
 
 </td>
@@ -3827,22 +3703,14 @@ worker_data$平均時薪 = worker_data$平均薪資/worker_data$平均工時</pr
 print(Motion, &quot;chart&quot;)</pre>
 
 <!-- MotionChart generated in R 3.1.1 by googleVis 0.5.5 package -->
-<<<<<<< HEAD
-<!-- Wed Oct  8 05:27:23 2014 -->
-=======
-<!-- Wed Oct  8 06:04:29 2014 -->
->>>>>>> gh-pages
+<!-- Wed Oct  8 08:27:41 2014 -->
 
 
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-<<<<<<< HEAD
-function gvisDataMotionChartID51872623b53e () {
-=======
-function gvisDataMotionChartID52bd458c50a4 () {
->>>>>>> gh-pages
+function gvisDataMotionChartID5b892040818e () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -16428,23 +16296,14 @@ return(data);
 }
  
 // jsDrawChart
-<<<<<<< HEAD
-function drawChartMotionChartID51872623b53e() {
-var data = gvisDataMotionChartID51872623b53e();
-=======
-function drawChartMotionChartID52bd458c50a4() {
-var data = gvisDataMotionChartID52bd458c50a4();
->>>>>>> gh-pages
+function drawChartMotionChartID5b892040818e() {
+var data = gvisDataMotionChartID5b892040818e();
 var options = {};
 options["width"] =    600;
 options["height"] =    500;
 
     var chart = new google.visualization.MotionChart(
-<<<<<<< HEAD
-    document.getElementById('MotionChartID51872623b53e')
-=======
-    document.getElementById('MotionChartID52bd458c50a4')
->>>>>>> gh-pages
+    document.getElementById('MotionChartID5b892040818e')
     );
     chart.draw(data,options);
     
@@ -16468,15 +16327,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-<<<<<<< HEAD
-callbacks.push(drawChartMotionChartID51872623b53e);
+callbacks.push(drawChartMotionChartID5b892040818e);
 })();
-function displayChartMotionChartID51872623b53e() {
-=======
-callbacks.push(drawChartMotionChartID52bd458c50a4);
-})();
-function displayChartMotionChartID52bd458c50a4() {
->>>>>>> gh-pages
+function displayChartMotionChartID5b892040818e() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -16500,20 +16353,12 @@ callbacks.shift()();
 </script>
  
 <!-- jsChart -->  
-<<<<<<< HEAD
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartMotionChartID51872623b53e"></script>
-=======
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartMotionChartID52bd458c50a4"></script>
->>>>>>> gh-pages
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartMotionChartID5b892040818e"></script>
  
 <!-- divChart -->
   
 
-<<<<<<< HEAD
-<div id="MotionChartID51872623b53e" style="width: 600; height: 500;">
-=======
-<div id="MotionChartID52bd458c50a4" style="width: 600; height: 500;">
->>>>>>> gh-pages
+<div id="MotionChartID5b892040818e" style="width: 600; height: 500;">
 </div>
 
 </article></slide><slide class='segue dark nobackground'><hgroup class = 'auto-fadein'><h2>其他相關套件</h2></hgroup><article >
@@ -16527,6 +16372,12 @@ callbacks.shift()();
 <pre class = 'prettyprint lang-r'>require(devtools)
 install_github(&#39;rCharts&#39;, &#39;ramnathv&#39;)</pre></li>
 <li>文件相對來說較為不完整，若要做細部調整需略懂Javascript較容易上手</li>
+<li>Share
+
+<ul>
+<li>save(): 另存html</li>
+<li>show(&#39;inline&#39;, include_assets = TRUE, cdn = TRUE): knitr</li>
+</ul></li>
 <li><p><a href='http://rcharts.io/gallery/' title=''>圖形範例</a></p></li>
 </ul>
 
@@ -16535,204 +16386,16 @@ install_github(&#39;rCharts&#39;, &#39;ramnathv&#39;)</pre></li>
 <pre class = 'prettyprint lang-r'>hair_eye_male &lt;- subset(as.data.frame(HairEyeColor), Sex == &#39;Male&#39;)
 library(rCharts)
 n1 &lt;- nPlot(Freq ~ Hair, group = &#39;Eye&#39;, data = hair_eye_male, type = &#39;multiBarChart&#39;)
-n1$show(&#39;inline&#39;, include_assets = TRUE, cdn = TRUE)</pre>
+n1$save(&quot;charts/nvd3.html&quot;)
+# n1$show(&#39;inline&#39;, include_assets = TRUE, cdn = TRUE)</pre>
 
-<link rel='stylesheet' href=//cdnjs.cloudflare.com/ajax/libs/nvd3/1.1.15-beta/nv.d3.min.css>
+<pre class = 'prettyprint lang-html'>&lt;iframe src=&quot;charts/nvd3.html&quot;&gt;&lt;/iframe&gt;</pre>
 
-<script type='text/javascript' src=//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js></script>
-<script type='text/javascript' src=//d3js.org/d3.v3.min.js></script>
-<script type='text/javascript' src=//cdnjs.cloudflare.com/ajax/libs/nvd3/1.1.15-beta/nv.d3.min.js></script>
-<script type='text/javascript' src=//nvd3.org/assets/lib/fisheye.js></script> 
- <style>
-  .rChart {
-    display: block;
-    margin-left: auto; 
-    margin-right: auto;
-    width: 800px;
-    height: 400px;
-  }  
-  </style>
+</article></slide><slide class=''><hgroup><h2>NVD3 Example</h2></hgroup><article  id="nvd3-example-1">
 
-<<<<<<< HEAD
-<div id="chart518772500d01" class="rChart nvd3">
-=======
-<div id="chart52bd7f0262a7" class="rChart nvd3">
->>>>>>> gh-pages
-</div>
+<iframe src="charts/nvd3.html"></iframe>
 
-<script type='text/javascript'>
- $(document).ready(function(){
-<<<<<<< HEAD
-      drawchart518772500d01()
-    });
-    function drawchart518772500d01(){  
-      var opts = {
- "dom": "chart518772500d01",
-=======
-      drawchart52bd7f0262a7()
-    });
-    function drawchart52bd7f0262a7(){  
-      var opts = {
- "dom": "chart52bd7f0262a7",
->>>>>>> gh-pages
-"width":    800,
-"height":    400,
-"x": "Hair",
-"y": "Freq",
-"group": "Eye",
-"type": "multiBarChart",
-<<<<<<< HEAD
-"id": "chart518772500d01" 
-=======
-"id": "chart52bd7f0262a7" 
->>>>>>> gh-pages
-},
-        data = [
- {
- "Hair": "Black",
-"Eye": "Brown",
-"Sex": "Male",
-"Freq":             32 
-},
-{
- "Hair": "Brown",
-"Eye": "Brown",
-"Sex": "Male",
-"Freq":             53 
-},
-{
- "Hair": "Red",
-"Eye": "Brown",
-"Sex": "Male",
-"Freq":             10 
-},
-{
- "Hair": "Blond",
-"Eye": "Brown",
-"Sex": "Male",
-"Freq":              3 
-},
-{
- "Hair": "Black",
-"Eye": "Blue",
-"Sex": "Male",
-"Freq":             11 
-},
-{
- "Hair": "Brown",
-"Eye": "Blue",
-"Sex": "Male",
-"Freq":             50 
-},
-{
- "Hair": "Red",
-"Eye": "Blue",
-"Sex": "Male",
-"Freq":             10 
-},
-{
- "Hair": "Blond",
-"Eye": "Blue",
-"Sex": "Male",
-"Freq":             30 
-},
-{
- "Hair": "Black",
-"Eye": "Hazel",
-"Sex": "Male",
-"Freq":             10 
-},
-{
- "Hair": "Brown",
-"Eye": "Hazel",
-"Sex": "Male",
-"Freq":             25 
-},
-{
- "Hair": "Red",
-"Eye": "Hazel",
-"Sex": "Male",
-"Freq":              7 
-},
-{
- "Hair": "Blond",
-"Eye": "Hazel",
-"Sex": "Male",
-"Freq":              5 
-},
-{
- "Hair": "Black",
-"Eye": "Green",
-"Sex": "Male",
-"Freq":              3 
-},
-{
- "Hair": "Brown",
-"Eye": "Green",
-"Sex": "Male",
-"Freq":             15 
-},
-{
- "Hair": "Red",
-"Eye": "Green",
-"Sex": "Male",
-"Freq":              7 
-},
-{
- "Hair": "Blond",
-"Eye": "Green",
-"Sex": "Male",
-"Freq":              8 
-} 
-]
-  
-      if(!(opts.type==="pieChart" || opts.type==="sparklinePlus" || opts.type==="bulletChart")) {
-        var data = d3.nest()
-          .key(function(d){
-            //return opts.group === undefined ? 'main' : d[opts.group]
-            //instead of main would think a better default is opts.x
-            return opts.group === undefined ? opts.y : d[opts.group];
-          })
-          .entries(data);
-      }
-      
-      if (opts.disabled != undefined){
-        data.map(function(d, i){
-          d.disabled = opts.disabled[i]
-        })
-      }
-      
-      nv.addGraph(function() {
-        var chart = nv.models[opts.type]()
-          .width(opts.width)
-          .height(opts.height)
-          
-        if (opts.type != "bulletChart"){
-          chart
-            .x(function(d) { return d[opts.x] })
-            .y(function(d) { return d[opts.y] })
-        }
-          
-         
-        
-          
-        
 
-        
-        
-        
-      
-       d3.select("#" + opts.id)
-        .append('svg')
-        .datum(data)
-        .transition().duration(500)
-        .call(chart);
-
-       nv.utils.windowResize(chart.update);
-       return chart;
-      });
-    };
-</script>
 
 
 
@@ -16836,15 +16499,10 @@ m$save(&quot;charts/timeline.html&quot;)</pre>
 
 </article></slide><slide class=''><hgroup><h2>ggvis</h2></hgroup><article  id="ggvis">
 
-<<<<<<< HEAD
-</article></slide><slide class=''><hgroup><h2></h2></hgroup><article  id="section-6">
-=======
 <ul>
-<li>最近才放在CRAN的套件，語法類似ggplot</li>
+<li>2014年中才放在CRAN的套件，目前還不算穩定</li>
+<li>使用pipe，語法類似plot</li>
 </ul>
-
-</article></slide><slide class=''><hgroup><h2>Scatter Plot</h2></hgroup><article  id="scatter-plot">
->>>>>>> gh-pages
 
 <pre class = 'prettyprint lang-r'>library(knitr)
 library(ggvis)
@@ -16854,45 +16512,29 @@ out = mtcars %&gt;%
     layer_points(fill = ~factor(cyl), size := 50, size.hover := 200) %&gt;%
     set_options(hover_duration = 250) </pre>
 
-<<<<<<< HEAD
-<p><div id="plot_id746190147-container" class="ggvis-output-container">
-<div id="plot_id746190147" class="ggvis-output"></div>
-=======
-<p><div id="plot_id261182299-container" class="ggvis-output-container">
-<div id="plot_id261182299" class="ggvis-output"></div>
->>>>>>> gh-pages
+</article></slide><slide class=''><hgroup><h2>ggvis</h2></hgroup><article  id="ggvis-1">
+
+<p><div id="plot_id884286501-container" class="ggvis-output-container">
+<div id="plot_id884286501" class="ggvis-output"></div>
 <div class="plot-gear-icon">
 <nav class="ggvis-control">
 <a class="ggvis-dropdown-toggle" title="Controls" onclick="return false;"></a>
 <ul class="ggvis-dropdown">
 <li>
 Renderer: 
-<<<<<<< HEAD
-<a id="plot_id746190147_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id746190147" data-renderer="svg">SVG</a>
+<a id="plot_id884286501_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id884286501" data-renderer="svg">SVG</a>
  | 
-<a id="plot_id746190147_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id746190147" data-renderer="canvas">Canvas</a>
+<a id="plot_id884286501_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id884286501" data-renderer="canvas">Canvas</a>
 </li>
 <li>
-<a id="plot_id746190147_download" class="ggvis-download" data-plot-id="plot_id746190147">Download</a>
-=======
-<a id="plot_id261182299_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id261182299" data-renderer="svg">SVG</a>
- | 
-<a id="plot_id261182299_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id261182299" data-renderer="canvas">Canvas</a>
-</li>
-<li>
-<a id="plot_id261182299_download" class="ggvis-download" data-plot-id="plot_id261182299">Download</a>
->>>>>>> gh-pages
+<a id="plot_id884286501_download" class="ggvis-download" data-plot-id="plot_id884286501">Download</a>
 </li>
 </ul>
 </nav>
 </div>
 </div>
 <script type="text/javascript">
-<<<<<<< HEAD
-var plot_id746190147_spec = {
-=======
-var plot_id261182299_spec = {
->>>>>>> gh-pages
+var plot_id884286501_spec = {
 	"data" : [
 		{
 			"name" : "mtcars0",
@@ -17103,8 +16745,8 @@ var plot_id261182299_spec = {
 			}
 		}
 	],
-	"width" : 720,
-	"height" : 240,
+	"width" : 768,
+	"height" : 480,
 	"legends" : [
 		{
 			"orient" : "right",
@@ -17137,17 +16779,13 @@ var plot_id261182299_spec = {
 		"padding" : {},
 		"duration" : 250,
 		"renderer" : "svg",
-		"width" : 720,
-		"height" : 240,
+		"width" : 768,
+		"height" : 480,
 		"hover_duration" : 250
 	},
 	"handlers" : null
 };
-<<<<<<< HEAD
-ggvis.getPlot("plot_id746190147").parseSpec(plot_id746190147_spec);
-=======
-ggvis.getPlot("plot_id261182299").parseSpec(plot_id261182299_spec);
->>>>>>> gh-pages
+ggvis.getPlot("plot_id884286501").parseSpec(plot_id884286501_spec);
 </script></p>
 
 </article></slide><slide class='segue dark nobackground'><hgroup class = 'auto-fadein'><h2>Shiny</h2></hgroup><article  id="shiny">
@@ -17272,7 +16910,7 @@ output$z &lt;- renderText({
 
 <p><img src="data:image/png;base64,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bWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iWE1QIENvcmUgNS40LjAiPgogICA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPgogICAgICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIgogICAgICAgICAgICB4bWxuczpleGlmPSJodHRwOi8vbnMuYWRvYmUuY29tL2V4aWYvMS4wLyI+CiAgICAgICAgIDxleGlmOlBpeGVsWERpbWVuc2lvbj42ODM8L2V4aWY6UGl4ZWxYRGltZW5zaW9uPgogICAgICAgICA8ZXhpZjpQaXhlbFlEaW1lbnNpb24+MTU3PC9leGlmOlBpeGVsWURpbWVuc2lvbj4KICAgICAgPC9yZGY6RGVzY3JpcHRpb24+CiAgIDwvcmRmOlJERj4KPC94OnhtcG1ldGE+CppQvqYAADWTSURBVHgB7Z0LXFTV1sBH5amCgoIGKiCgA8qg4INUSKBb8lkOlVoJlFgJ2QP8Sg0LumFBaiWS14Q+wxRN8zl2TSsBEzNJRRlUEEFABRUUFFAQRv0WDLPPYZgZBphz5gyz5udP1tlnP9b+n8deZz/W7nWt5hEPf0gACSABJIAEkICeEeitZ/XF6iIBJIAEkAASQALNBNACwPsACSABJIAEkIA+EkALQB+vOtYZCSABJIAEkABaAHgPIAEkgASQABLQRwJoAejjVcc6IwEkgASQABJACwDvASSABJAAEkAC+kgALQB9vOpYZySABJAAEkACaAHgPYAEkAASQAJIQB8JoAWgj1cd64wEkAASQAJIAC0AvAeQABJAAkgACegjAbQA9PGqY52RABJAAkgACaAFgPcAEkACSAAJIAF9JIAWgD5edawzEkACSAAJIAG0APAeQAJIAAkgASSgjwTQAtDHq451RgJIAAkgASSAFgDeA0gACSABJIAE9JEAWgD6eNWxzkgACSABJIAE0ALAewAJIAEkgASQgD4SQAtAH6861hkJIAEkgASQAFoAeA8gASSABJAAEtBHAmgB6ONVxzojASSABJAAEkALAO8BJIAEkAASQAL6SMBAHyuNdUYCSAAJKCcgafkpP49nkABXCBgbG/fq1avL2qAF0GV0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" height="100"></p>
 
-</article></slide><slide class=''><hgroup><h2>薪資及生產力統計資料範例</h2></hgroup><article >
+</article></slide><slide class=''><hgroup><h2></h2></hgroup><article  id="section-5">
 
 <!--iframe src="http://spark.rstudio.com/mansunkuo/googleVis_shiny/"></iframe-->
 <iframe src="https://mansunkuo.shinyapps.io/googleVis_shiny/"></iframe>
@@ -17390,17 +17028,11 @@ shinyServer(function(input, output) {
 </article></slide><slide class=''><hgroup><h2>Share Your App</h2></hgroup><article  id="share-your-app">
 
 <ul>
-<<<<<<< HEAD
-<li><p><a href='https://www.shinyapps.io/' title=''>ShinyApps.io</a></p></li>
-<li><p><a href='http://www.rstudio.com/products/shiny/shiny-server/' title=''>Shiny Server</a></p>
-
-<ul>
-<li>預設Shiny Server會位於/srv/shiny-server</li>
-=======
 <li><p><a href='https://www.shinyapps.io/' title=''>ShinyApps.io</a></p>
 
 <ul>
-<li>RStudio推出的雲端Shiny Server服務</li>
+<li>RStudio推出的雲端Shiny Server服務，透過RStudiod可藉由點選的方式上傳應用</li>
+<li>目前仍是alpha</li>
 </ul></li>
 </ul>
 
@@ -17410,8 +17042,7 @@ shinyServer(function(input, output) {
 <li><p><a href='http://www.rstudio.com/products/shiny/shiny-server/' title=''>Shiny Server</a></p>
 
 <ul>
-<li>預設Shiny Server資料夾會位於/srv/shiny-server</li>
->>>>>>> gh-pages
+<li>預設Shiny Server會位於/srv/shiny-server</li>
 </ul></li>
 </ul>
 
@@ -17488,6 +17119,15 @@ shinyServer(function(input, output) {
   RedirectMatch permanent ^/shiny$ /shiny/
 &lt;/VirtualHost&gt;</pre>
 
+</article></slide><slide class=''><hgroup><h2>心得</h2></hgroup><article >
+
+<ul>
+<li>天下沒有白吃的午餐</li>
+<li>投影片有可能和部分套件或圖形相衝突</li>
+<li>同時使用多個不同的圖形套件時，套件有可能會互相影響</li>
+<li>怎麼樣圖形都會跑掉的話，就試試iframe吧</li>
+</ul>
+
 </article></slide><slide class=''><hgroup><h2>參考資料</h2></hgroup><article >
 
 <p>googleVis:</p>
@@ -17507,11 +17147,7 @@ shinyServer(function(input, output) {
 <li><a href='http://rstudio.github.io/shiny-server/latest/' title=''>The Administrator&#39;s Guide to Shiny Server</a></li>
 </ul>
 
-<<<<<<< HEAD
-</article></slide><slide class=''><hgroup><h2></h2></hgroup><article  id="section-7">
-=======
 </article></slide><slide class=''><hgroup><h2></h2></hgroup><article  id="section-6">
->>>>>>> gh-pages
 
 <p>rCharts &amp; ggvis:</p>
 
@@ -17526,6 +17162,7 @@ shinyServer(function(input, output) {
 
 <ul>
 <li><a href='https://rpubs.com/mansun_kuo/24330' title=''>An Introduction to R Markdown</a></li>
+<li><a href='https://github.com/mansunkuo/vis_intro' title=''>github</a></li>
 </ul></article></slide>
 
 

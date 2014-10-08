@@ -11,8 +11,6 @@ output:
 subtitle: googleVis and shiny
 ---
 
-
-
 # 前言
 ```{r Preface}
 ```
@@ -56,13 +54,8 @@ I have no idea what you're talking about...
 
 ## {.flexbox .vcenter .emphasized}
 
-讓資料看起來美觀甚至是有趣還是很重要
-
-
-## {.flexbox .vcenter .emphasized}
-
 <span>今天談談怎麼使用R做出動來動去  
-<span style="text-decoration: line-through;">但用途不明</span>的圖表</span>
+<span style="text-decoration: line-through;">但用途不明</span>的有趣圖表</span>
 
 
 # googleVis
@@ -107,7 +100,7 @@ Why:
 - options參數以List型態輸入，中間可能包括json物件
 - Motion、Annotated Time Lines和Geo Maps需要Flash
 - 在本地資料夾使用motion chart需設定flash安全安全性
-- html slides相容性
+- html slides相容性，有時需要重新整理頁面才能有良好的解析度
 
 
 ## 讀取googleVis
@@ -300,7 +293,6 @@ print(Motion, "chart")
 
 # 其他相關套件
 
-
 ## [rCharts](http://rcharts.io/#)
 
 - 集結了目前時下最熱門的Javascript圖形套件
@@ -310,6 +302,9 @@ require(devtools)
 install_github('rCharts', 'ramnathv')
 ```
 - 文件相對來說較為不完整，若要做細部調整需略懂Javascript較容易上手
+- Share
+    - save(): 另存html
+    - show('inline', include_assets = TRUE, cdn = TRUE): knitr
 - [圖形範例](http://rcharts.io/gallery/)
 
 
@@ -320,8 +315,19 @@ install_github('rCharts', 'ramnathv')
 hair_eye_male <- subset(as.data.frame(HairEyeColor), Sex == 'Male')
 library(rCharts)
 n1 <- nPlot(Freq ~ Hair, group = 'Eye', data = hair_eye_male, type = 'multiBarChart')
-n1$show('inline', include_assets = TRUE, cdn = TRUE)
+n1$save("charts/nvd3.html")
+# n1$show('inline', include_assets = TRUE, cdn = TRUE)
 ```
+
+```html
+<iframe src="charts/nvd3.html"></iframe>
+```
+
+## NVD3 Example
+
+<iframe src="charts/nvd3.html"></iframe>
+
+
 
 
 ## Timeline Example - Code
@@ -365,18 +371,12 @@ cat("```yaml",
 </div>
 
 
+
 ## ggvis
 
-<<<<<<< HEAD
+- 2014年中才放在CRAN的套件，目前還不算穩定
+- 使用pipe，語法類似plot
 
-
-## 
-=======
-- 最近才放在CRAN的套件，語法類似ggplot
-
-
-## Scatter Plot
->>>>>>> gh-pages
 
 ```{r message=FALSE, echo=TRUE}
 library(knitr)
@@ -388,9 +388,14 @@ out = mtcars %>%
     set_options(hover_duration = 250) 
 ```
 
-```{r message=FALSE, echo=FALSE, fig.height=2.5}
+## ggvis
+
+```{r message=FALSE, echo=FALSE, fig.height=5, fig.width=8}
 out
 ```
+
+
+
 
 
 # Shiny
@@ -507,7 +512,7 @@ observe({
 
 <img src="images/observe.png" height="100">
 
-## 薪資及生產力統計資料範例
+## 
 
 <!--iframe src="http://spark.rstudio.com/mansunkuo/googleVis_shiny/"></iframe-->
 <iframe src="https://mansunkuo.shinyapps.io/googleVis_shiny/"></iframe>
@@ -550,12 +555,8 @@ cat("```r",
 
 - [ShinyApps.io](https://www.shinyapps.io/)
 
-<<<<<<< HEAD
-- [Shiny Server](http://www.rstudio.com/products/shiny/shiny-server/)
-
-    - 預設Shiny Server會位於/srv/shiny-server
-=======
-    - RStudio推出的雲端Shiny Server服務
+    - RStudio推出的雲端Shiny Server服務，透過RStudiod可藉由點選的方式上傳應用
+    - 目前仍是alpha
 
 ```r
 devtools::install_github('rstudio/shinyapps')
@@ -563,10 +564,9 @@ devtools::install_github('rstudio/shinyapps')
 
 - [Shiny Server](http://www.rstudio.com/products/shiny/shiny-server/)
 
-    - 預設Shiny Server資料夾會位於/srv/shiny-server
->>>>>>> gh-pages
-
-
+    - 預設Shiny Server會位於/srv/shiny-server
+    
+    
 ## Hosting Model
 
 假設Shiny Server的URL是http://server.com/shiny/
@@ -597,6 +597,8 @@ http://server.com/shiny/assets/script.js  | Serve this static JS file
 
 </div>
 
+
+
 ## Reverse Proxy
 
 安裝Shiny Server後可設定reverse proxy，細節可參考
@@ -619,6 +621,16 @@ http://server.com/shiny/assets/script.js  | Serve this static JS file
   RedirectMatch permanent ^/shiny$ /shiny/
 </VirtualHost>
 ```
+
+
+## 心得
+
+- 天下沒有白吃的午餐
+- 投影片有可能和部分套件或圖形相衝突
+- 同時使用多個不同的圖形套件時，套件有可能會互相影響
+- 怎麼樣圖形都會跑掉的話，就試試iframe吧
+
+
 
 ## 參考資料
 
@@ -649,4 +661,4 @@ rCharts & ggvis:
 Others:
 
 - [An Introduction to R Markdown](https://rpubs.com/mansun_kuo/24330)
-
+- [github](https://github.com/mansunkuo/vis_intro)
