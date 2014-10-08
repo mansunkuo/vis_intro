@@ -11,12 +11,15 @@ m$main(
         media = "https://www.youtube.com/watch?v=YSYmg6Bhukc"
     )
 )
+m$config(font = "Merriweather-Newscycle")
+m$event(his)
+
+# copy related library
 rcharts_local = "charts/libraries/timeline"
 rcharts_lib = file.path(find.package("rCharts"), 
                         "libraries/timeline")
 dir.create(dirname(rcharts_local))
 file.copy(rcharts_lib, dirname(rcharts_local), recursive = TRUE)
 m$LIB$url = "libraries/timeline"
-m$config(font = "Merriweather-Newscycle")
-m$event(his)
+
 m$save("charts/timeline.html")

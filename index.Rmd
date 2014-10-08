@@ -73,7 +73,7 @@ Why:
 
 - 歷史悠久(2010~)
 - 在CRAN即可下載
-- 能完成大部分基本的統計圖表
+- 能完成大部分基本的統計圖作業
 
 
 ## 應用方式
@@ -311,12 +311,15 @@ install_github('rCharts', 'ramnathv')
 ## NVD3 Example
 
 
-```{r results='asis'}
+```{r results='asis', warning=FALSE}
 hair_eye_male <- subset(as.data.frame(HairEyeColor), Sex == 'Male')
 library(rCharts)
-n1 <- nPlot(Freq ~ Hair, group = 'Eye', data = hair_eye_male, type = 'multiBarChart')
-n1$save("charts/nvd3.html")
+library(base64enc)
+n1 = nPlot(Freq ~ Hair, group = 'Eye', 
+           data = hair_eye_male, 
+           type = 'multiBarChart')
 # n1$show('inline', include_assets = TRUE, cdn = TRUE)
+n1$save("charts/nvd3.html", standalone = TRUE)
 ```
 
 ```html
@@ -374,8 +377,9 @@ cat("```yaml",
 
 ## ggvis
 
-- 2014年中才放在CRAN的套件，目前還不算穩定
+- 2014年中才放在CRAN的套件，持續成長中
 - 使用pipe，語法類似plot
+- 部分功能如tooltip需搭配shiny server才能使用
 
 
 ```{r message=FALSE, echo=TRUE}
@@ -393,8 +397,6 @@ out = mtcars %>%
 ```{r message=FALSE, echo=FALSE, fig.height=5, fig.width=8}
 out
 ```
-
-
 
 
 
@@ -626,10 +628,10 @@ http://server.com/shiny/assets/script.js  | Serve this static JS file
 ## 心得
 
 - 天下沒有白吃的午餐
+- 需注意Javascript套件之路徑
 - 投影片有可能和部分套件或圖形相衝突
 - 同時使用多個不同的圖形套件時，套件有可能會互相影響
 - 怎麼樣圖形都會跑掉的話，就試試iframe吧
-
 
 
 ## 參考資料

@@ -156,7 +156,7 @@
 <ul>
 <li>歷史悠久(2010~)</li>
 <li>在CRAN即可下載</li>
-<li>能完成大部分基本的統計圖表</li>
+<li>能完成大部分基本的統計圖作業</li>
 </ul>
 
 </article></slide><slide class=''><hgroup><h2>應用方式</h2></hgroup><article >
@@ -282,14 +282,14 @@ Table = gvisTable(gvisdata, options=list(page=&quot;enable&quot;))
 print(Table, &quot;chart&quot;)</pre>
 
 <!-- Table generated in R 3.1.1 by googleVis 0.5.5 package -->
-<!-- Wed Oct  8 08:27:41 2014 -->
+<!-- Wed Oct  8 09:28:42 2014 -->
 
 
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataTableID5b89137cf9a1 () {
+function gvisDataTableID5ea965926d9f () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -1865,14 +1865,14 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartTableID5b89137cf9a1() {
-var data = gvisDataTableID5b89137cf9a1();
+function drawChartTableID5ea965926d9f() {
+var data = gvisDataTableID5ea965926d9f();
 var options = {};
 options["allowHtml"] = true;
 options["page"] = "enable";
 
     var chart = new google.visualization.Table(
-    document.getElementById('TableID5b89137cf9a1')
+    document.getElementById('TableID5ea965926d9f')
     );
     chart.draw(data,options);
     
@@ -1896,9 +1896,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartTableID5b89137cf9a1);
+callbacks.push(drawChartTableID5ea965926d9f);
 })();
-function displayChartTableID5b89137cf9a1() {
+function displayChartTableID5ea965926d9f() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -1922,12 +1922,12 @@ callbacks.shift()();
 </script>
  
 <!-- jsChart -->  
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartTableID5b89137cf9a1"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartTableID5ea965926d9f"></script>
  
 <!-- divChart -->
   
 
-<div id="TableID5b89137cf9a1" style="width: 500; height: automatic;">
+<div id="TableID5ea965926d9f" style="width: 500; height: automatic;">
 </div>
 
 </article></slide><slide class=''><hgroup><h2>gvisMap</h2></hgroup><article  id="gvismap">
@@ -1972,14 +1972,14 @@ Bar = gvisBarChart(gvisdata[which(gvisdata[,2]&gt;5),],
 <pre class = 'prettyprint lang-r'>print(Bar, &quot;chart&quot;) </pre>
 
 <!-- BarChart generated in R 3.1.1 by googleVis 0.5.5 package -->
-<!-- Wed Oct  8 08:27:41 2014 -->
+<!-- Wed Oct  8 09:28:42 2014 -->
 
 
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataBarChartID5b89685bb7af () {
+function gvisDataBarChartID5ea96bf585f7 () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -2035,8 +2035,8 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartBarChartID5b89685bb7af() {
-var data = gvisDataBarChartID5b89685bb7af();
+function drawChartBarChartID5ea96bf585f7() {
+var data = gvisDataBarChartID5ea96bf585f7();
 var options = {};
 options["allowHtml"] = true;
 options["width"] =    980;
@@ -2044,7 +2044,7 @@ options["height"] =    500;
 options["hAxis"] = {'minValue': 0};
 
     var chart = new google.visualization.BarChart(
-    document.getElementById('BarChartID5b89685bb7af')
+    document.getElementById('BarChartID5ea96bf585f7')
     );
     chart.draw(data,options);
     
@@ -2068,9 +2068,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartBarChartID5b89685bb7af);
+callbacks.push(drawChartBarChartID5ea96bf585f7);
 })();
-function displayChartBarChartID5b89685bb7af() {
+function displayChartBarChartID5ea96bf585f7() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -2094,12 +2094,12 @@ callbacks.shift()();
 </script>
  
 <!-- jsChart -->  
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartBarChartID5b89685bb7af"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartBarChartID5ea96bf585f7"></script>
  
 <!-- divChart -->
   
 
-<div id="BarChartID5b89685bb7af" style="width: 980; height: 500;">
+<div id="BarChartID5ea96bf585f7" style="width: 980; height: 500;">
 </div>
 
 </article></slide><slide class=''><hgroup><h2>gvisHistogram &amp; gvisMerge</h2></hgroup><article  id="gvishistogram-gvismerge">
@@ -2127,14 +2127,14 @@ hist_latlon = gvisMerge(hist_lat, hist_lon, horizontal = TRUE)</pre>
 <pre class = 'prettyprint lang-r'>print(hist_latlon, &quot;chart&quot;)</pre>
 
 <!-- Histogram generated in R 3.1.1 by googleVis 0.5.5 package -->
-<!-- Wed Oct  8 08:27:41 2014 -->
+<!-- Wed Oct  8 09:28:42 2014 -->
 
 
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataHistogramID5b895d7877af () {
+function gvisDataHistogramID5ea9442e5280 () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -2815,7 +2815,7 @@ return(data);
 
 
 // jsData 
-function gvisDataHistogramID5b89ff9b21a () {
+function gvisDataHistogramID5ea93d2a7478 () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -3495,8 +3495,8 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartHistogramID5b895d7877af() {
-var data = gvisDataHistogramID5b895d7877af();
+function drawChartHistogramID5ea9442e5280() {
+var data = gvisDataHistogramID5ea9442e5280();
 var options = {};
 options["allowHtml"] = true;
 options["vAxis"] = {'title': 'Latitude'};
@@ -3508,7 +3508,7 @@ options["width"] =    500;
 options["height"] =    500;
 
     var chart = new google.visualization.Histogram(
-    document.getElementById('HistogramID5b895d7877af')
+    document.getElementById('HistogramID5ea9442e5280')
     );
     chart.draw(data,options);
     
@@ -3518,8 +3518,8 @@ options["height"] =    500;
 
 
 // jsDrawChart
-function drawChartHistogramID5b89ff9b21a() {
-var data = gvisDataHistogramID5b89ff9b21a();
+function drawChartHistogramID5ea93d2a7478() {
+var data = gvisDataHistogramID5ea93d2a7478();
 var options = {};
 options["allowHtml"] = true;
 options["vAxis"] = {'title': 'Frequency'};
@@ -3531,7 +3531,7 @@ options["width"] =    500;
 options["height"] =    500;
 
     var chart = new google.visualization.Histogram(
-    document.getElementById('HistogramID5b89ff9b21a')
+    document.getElementById('HistogramID5ea93d2a7478')
     );
     chart.draw(data,options);
     
@@ -3555,9 +3555,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartHistogramID5b895d7877af);
+callbacks.push(drawChartHistogramID5ea9442e5280);
 })();
-function displayChartHistogramID5b895d7877af() {
+function displayChartHistogramID5ea9442e5280() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -3594,9 +3594,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartHistogramID5b89ff9b21a);
+callbacks.push(drawChartHistogramID5ea93d2a7478);
 })();
-function displayChartHistogramID5b89ff9b21a() {
+function displayChartHistogramID5ea93d2a7478() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -3620,11 +3620,11 @@ callbacks.shift()();
 </script>
  
 <!-- jsChart -->  
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartHistogramID5b895d7877af"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartHistogramID5ea9442e5280"></script>
 
 
 <!-- jsChart -->  
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartHistogramID5b89ff9b21a"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartHistogramID5ea93d2a7478"></script>
  
 <table border="0">
 <tr>
@@ -3633,7 +3633,7 @@ callbacks.shift()();
 <!-- divChart -->
   
 
-<div id="HistogramID5b895d7877af" style="width: 500; height: 500;">
+<div id="HistogramID5ea9442e5280" style="width: 500; height: 500;">
 </div>
 
 </td>
@@ -3642,7 +3642,7 @@ callbacks.shift()();
 <!-- divChart -->
   
 
-<div id="HistogramID5b89ff9b21a" style="width: 500; height: 500;">
+<div id="HistogramID5ea93d2a7478" style="width: 500; height: 500;">
 </div>
 
 </td>
@@ -3703,14 +3703,14 @@ worker_data$平均時薪 = worker_data$平均薪資/worker_data$平均工時</pr
 print(Motion, &quot;chart&quot;)</pre>
 
 <!-- MotionChart generated in R 3.1.1 by googleVis 0.5.5 package -->
-<!-- Wed Oct  8 08:27:41 2014 -->
+<!-- Wed Oct  8 09:28:43 2014 -->
 
 
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataMotionChartID5b892040818e () {
+function gvisDataMotionChartID5ea917b682ac () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -16296,14 +16296,14 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartMotionChartID5b892040818e() {
-var data = gvisDataMotionChartID5b892040818e();
+function drawChartMotionChartID5ea917b682ac() {
+var data = gvisDataMotionChartID5ea917b682ac();
 var options = {};
 options["width"] =    600;
 options["height"] =    500;
 
     var chart = new google.visualization.MotionChart(
-    document.getElementById('MotionChartID5b892040818e')
+    document.getElementById('MotionChartID5ea917b682ac')
     );
     chart.draw(data,options);
     
@@ -16327,9 +16327,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartMotionChartID5b892040818e);
+callbacks.push(drawChartMotionChartID5ea917b682ac);
 })();
-function displayChartMotionChartID5b892040818e() {
+function displayChartMotionChartID5ea917b682ac() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -16353,12 +16353,12 @@ callbacks.shift()();
 </script>
  
 <!-- jsChart -->  
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartMotionChartID5b892040818e"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartMotionChartID5ea917b682ac"></script>
  
 <!-- divChart -->
   
 
-<div id="MotionChartID5b892040818e" style="width: 600; height: 500;">
+<div id="MotionChartID5ea917b682ac" style="width: 600; height: 500;">
 </div>
 
 </article></slide><slide class='segue dark nobackground'><hgroup class = 'auto-fadein'><h2>其他相關套件</h2></hgroup><article >
@@ -16385,9 +16385,12 @@ install_github(&#39;rCharts&#39;, &#39;ramnathv&#39;)</pre></li>
 
 <pre class = 'prettyprint lang-r'>hair_eye_male &lt;- subset(as.data.frame(HairEyeColor), Sex == &#39;Male&#39;)
 library(rCharts)
-n1 &lt;- nPlot(Freq ~ Hair, group = &#39;Eye&#39;, data = hair_eye_male, type = &#39;multiBarChart&#39;)
-n1$save(&quot;charts/nvd3.html&quot;)
-# n1$show(&#39;inline&#39;, include_assets = TRUE, cdn = TRUE)</pre>
+library(base64enc)
+n1 = nPlot(Freq ~ Hair, group = &#39;Eye&#39;, 
+           data = hair_eye_male, 
+           type = &#39;multiBarChart&#39;)
+# n1$show(&#39;inline&#39;, include_assets = TRUE, cdn = TRUE)
+n1$save(&quot;charts/nvd3.html&quot;, standalone = TRUE)</pre>
 
 <pre class = 'prettyprint lang-html'>&lt;iframe src=&quot;charts/nvd3.html&quot;&gt;&lt;/iframe&gt;</pre>
 
@@ -16417,15 +16420,19 @@ m$main(
         media = &quot;https://www.youtube.com/watch?v=YSYmg6Bhukc&quot;
     )
 )
+m$config(font = &quot;Merriweather-Newscycle&quot;)
+m$event(his)
+
+# copy related library
 rcharts_local = &quot;charts/libraries/timeline&quot;
 rcharts_lib = file.path(find.package(&quot;rCharts&quot;), 
                         &quot;libraries/timeline&quot;)
 dir.create(dirname(rcharts_local))
 file.copy(rcharts_lib, dirname(rcharts_local), recursive = TRUE)
 m$LIB$url = &quot;libraries/timeline&quot;
-m$config(font = &quot;Merriweather-Newscycle&quot;)
-m$event(his)
-m$save(&quot;charts/timeline.html&quot;)</pre>
+
+m$save(&quot;charts/timeline.html&quot;)
+</pre>
 
 <p>Load with iframe:</p>
 
@@ -16500,8 +16507,9 @@ m$save(&quot;charts/timeline.html&quot;)</pre>
 </article></slide><slide class=''><hgroup><h2>ggvis</h2></hgroup><article  id="ggvis">
 
 <ul>
-<li>2014年中才放在CRAN的套件，目前還不算穩定</li>
+<li>2014年中才放在CRAN的套件，持續成長中</li>
 <li>使用pipe，語法類似plot</li>
+<li>部分功能如tooltip需搭配shiny server才能使用</li>
 </ul>
 
 <pre class = 'prettyprint lang-r'>library(knitr)
@@ -16514,27 +16522,27 @@ out = mtcars %&gt;%
 
 </article></slide><slide class=''><hgroup><h2>ggvis</h2></hgroup><article  id="ggvis-1">
 
-<p><div id="plot_id884286501-container" class="ggvis-output-container">
-<div id="plot_id884286501" class="ggvis-output"></div>
+<p><div id="plot_id269790906-container" class="ggvis-output-container">
+<div id="plot_id269790906" class="ggvis-output"></div>
 <div class="plot-gear-icon">
 <nav class="ggvis-control">
 <a class="ggvis-dropdown-toggle" title="Controls" onclick="return false;"></a>
 <ul class="ggvis-dropdown">
 <li>
 Renderer: 
-<a id="plot_id884286501_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id884286501" data-renderer="svg">SVG</a>
+<a id="plot_id269790906_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id269790906" data-renderer="svg">SVG</a>
  | 
-<a id="plot_id884286501_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id884286501" data-renderer="canvas">Canvas</a>
+<a id="plot_id269790906_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id269790906" data-renderer="canvas">Canvas</a>
 </li>
 <li>
-<a id="plot_id884286501_download" class="ggvis-download" data-plot-id="plot_id884286501">Download</a>
+<a id="plot_id269790906_download" class="ggvis-download" data-plot-id="plot_id269790906">Download</a>
 </li>
 </ul>
 </nav>
 </div>
 </div>
 <script type="text/javascript">
-var plot_id884286501_spec = {
+var plot_id269790906_spec = {
 	"data" : [
 		{
 			"name" : "mtcars0",
@@ -16785,7 +16793,7 @@ var plot_id884286501_spec = {
 	},
 	"handlers" : null
 };
-ggvis.getPlot("plot_id884286501").parseSpec(plot_id884286501_spec);
+ggvis.getPlot("plot_id269790906").parseSpec(plot_id269790906_spec);
 </script></p>
 
 </article></slide><slide class='segue dark nobackground'><hgroup class = 'auto-fadein'><h2>Shiny</h2></hgroup><article  id="shiny">
@@ -17123,6 +17131,7 @@ shinyServer(function(input, output) {
 
 <ul>
 <li>天下沒有白吃的午餐</li>
+<li>需注意Javascript套件之路徑</li>
 <li>投影片有可能和部分套件或圖形相衝突</li>
 <li>同時使用多個不同的圖形套件時，套件有可能會互相影響</li>
 <li>怎麼樣圖形都會跑掉的話，就試試iframe吧</li>
