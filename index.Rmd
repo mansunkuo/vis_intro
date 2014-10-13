@@ -476,7 +476,7 @@ output$z <- renderText({
 x <- reactive({
     input$a
 })
-output$z <- renderText({
+output$y <- renderText({
     x()
 })
 output$z <- renderText({
