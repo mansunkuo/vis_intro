@@ -514,12 +514,12 @@ observe({
 
 <img src="images/observe.png" height="100">
 
-## 
+## {.smaller}
 
 <!--iframe src="http://spark.rstudio.com/mansunkuo/googleVis_shiny/"></iframe-->
 <iframe src="https://mansunkuo.shinyapps.io/googleVis_shiny/"></iframe>
 
-
+Shinyapps.io is not stable yet. Please visit [here](http://spark.rstudio.com/mansunkuo/googleVis_shiny/) if above app doesn't work.
 
 ## server.R
 
